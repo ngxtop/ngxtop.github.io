@@ -12,4 +12,5 @@ jobs:
     steps:
       - uses: docker://pandoc/core:2.9
         with:
-          args: pandoc --from rst --to html5
+          args: pandoc -s README.rst -o index.html
+
