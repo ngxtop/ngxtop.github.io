@@ -10,6 +10,7 @@ jobs:
   pandoc:
     runs-on: ubuntu-18.04
     steps:
+      - uses: actions/checkout@v1
       - uses: docker://pandoc/core:2.9
         with:
           args: pandoc -s README.rst -o index.html
